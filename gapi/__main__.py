@@ -1,7 +1,6 @@
 import os
 import sys
 import argparse
-from controller import *
 
 from importlib_metadata import version
 import warnings
@@ -25,3 +24,7 @@ GSheet Applications Programming Interface - v{v}
 Created by Shahil
 Copyright 2023. All rights reserved.
     '''
+    parser = argparse.ArgumentParser(description=program_descripton,formatter_class=argparse.RawTextHelpFormatter, add_help=True, usage='python -m payall -c <crypto> -t <type>')parser = argparse.ArgumentParser(description=program_descripton,formatter_class=argparse.RawTextHelpFormatter, add_help=True, usage='python -m gapi -h')
+
+if __name__=="__main__":
+    main()

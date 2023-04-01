@@ -4,21 +4,23 @@ this_directory = Path(__file__).parent
 long_description = (this_directory / "README.md").read_text(encoding="utf-8")
 
 setuptools.setup(
-    name='payall',
-    version='1.0.2.3',
-    description='Cross Chain Streamlined Payment Engine',
+    name='gapi',
+    version='1.0.0',
+    description='GSheet Applications Programming Interface',
     long_description_content_type='text/markdown',
     long_description=long_description,
-    url='http://www.hashit.ml/',
-    author='Hash - It',
+    url='http://www.shahilislam.ml/',
+    author='Shahil Islam',
     author_email='shahilislam@gmail.com',
     license='MIT',
     readme = "README.md",
-    packages=['controller','solanaprocessor','payall'],
+    packages=['gapi','gapi.readsheet'],
     zip = False,
     install_requires=[
-        "requests",
         "importlib-metadata",
+        "google-api-python-client",
+        "google-auth-httplib2",
+        "google-auth-oauthlib"
       ],
     package_data={
         '':[
@@ -26,7 +28,7 @@ setuptools.setup(
     },
     entry_points={
         'console_scripts': [
-            'payall = payall.__main__:main',
+            'gapi = gapi.__main__:main',
         ]
     },
     classifiers=[ 
@@ -35,7 +37,7 @@ setuptools.setup(
         'Operating System :: OS Independent', 
     ],
     project_urls = {
-        'Source': 'https://github.com/islamshahil/Hash-It',
+        'Source': 'https://github.com/islamshahil/gapi',
     },
-    keywords="scripting, automation, python, blockchain, solana"
+    keywords="scripting, automation, python, gsheets"
 )
