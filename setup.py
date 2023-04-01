@@ -5,7 +5,7 @@ long_description = (this_directory / "README.md").read_text(encoding="utf-8")
 
 setuptools.setup(
     name='gspi',
-    version='1.0.1',
+    version='1.0.2',
     description='Google Sheets Programming Interface',
     long_description_content_type='text/markdown',
     long_description=long_description,
