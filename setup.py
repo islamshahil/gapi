@@ -4,9 +4,9 @@ this_directory = Path(__file__).parent
 long_description = (this_directory / "README.md").read_text(encoding="utf-8")
 
 setuptools.setup(
-    name='gapi',
+    name='gspi',
     version='1.0.1',
-    description='GSheet Applications Programming Interface',
+    description='Google Sheets Programming Interface',
     long_description_content_type='text/markdown',
     long_description=long_description,
     url='http://www.shahilislam.ml/',
@@ -14,7 +14,7 @@ setuptools.setup(
     author_email='shahilislam@gmail.com',
     license='MIT',
     readme = "README.md",
-    packages=['gapi','gapi.utils','gapi.read_sheet'],
+    packages=['gspi','gspi.utils','gspi.read_sheet'],
     zip = False,
     install_requires=[
         "importlib-metadata",
@@ -28,7 +28,7 @@ setuptools.setup(
     },
     entry_points={
         'console_scripts': [
-            'gapi = gapi.__main__:main',
+            'gspi = gspi.__main__:main',
         ]
     },
     classifiers=[ 
@@ -37,7 +37,7 @@ setuptools.setup(
         'Operating System :: OS Independent', 
     ],
     project_urls = {
-        'Source': 'https://github.com/islamshahil/gapi',
+        'Source': 'https://github.com/islamshahil/gspi',
     },
     keywords="scripting, automation, python, gsheets"
 )

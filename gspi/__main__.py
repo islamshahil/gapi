@@ -5,31 +5,32 @@ import datetime
 from importlib_metadata import version
 import warnings
 
-from gapi.utils import generate_token
+from gspi.utils import generate_token
 
 warnings.filterwarnings("ignore")
-v = version('gapi')
+v = version('gspi')
 today = datetime.date.today()
 year = today.strftime("%Y")
 
 def main():
 
     program_descripton = f'''
-                    _ 
-                   (_)
-   __ _  __ _ _ __  _ 
-  / _` |/ _` | '_ \| |
- | (_| | (_| | |_) | |
-  \__, |\__,_| .__/|_|
-   __/ |     | |      
-  |___/      |_|      
+                  _ 
+                 (_)
+   __ _ ___ _ __  _ 
+  / _` / __| '_ \| |
+ | (_| \__ \ |_) | |
+  \__, |___/ .__/|_|
+   __/ |   | |      
+  |___/    |_|      
+   
           
-GSheet Applications Programming Interface - v{v}
+Google Sheets Programming Interface - v{v}
 Created by Shahil
 Copyright {year}. All rights reserved.
     '''
-    parser = argparse.ArgumentParser(description=program_descripton,formatter_class=argparse.RawTextHelpFormatter, add_help=True, usage='python -m gapi -m generate_token -c <cred file path> -t <path to create token.json>')
-    parser.add_argument('-m', '--mode', dest='set mode', type=str, help='gapi modes: generate_token', metavar='')
+    parser = argparse.ArgumentParser(description=program_descripton,formatter_class=argparse.RawTextHelpFormatter, add_help=True, usage='python -m gspi -m generate_token -c <cred file path> -t <path to create token.json>')
+    parser.add_argument('-m', '--mode', dest='set mode', type=str, help='gspi modes: generate_token', metavar='')
     parser.add_argument('-c', '--creds', dest='credentials file', type=str, help='gsheet cred file', metavar='')
     parser.add_argument('-t', '--token', dest='token file', type=str, help='gsheet token file', metavar='')
 
