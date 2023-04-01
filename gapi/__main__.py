@@ -10,7 +10,7 @@ v = version('gapi')
 
 def main():
 
-	program_descripton = f'''
+    program_descripton = f'''
                     _ 
                    (_)
    __ _  __ _ _ __  _ 
