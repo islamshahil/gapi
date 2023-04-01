@@ -5,7 +5,7 @@ long_description = (this_directory / "README.md").read_text(encoding="utf-8")
 
 setuptools.setup(
     name='gapi',
-    version='1.0.0',
+    version='1.0.1',
     description='GSheet Applications Programming Interface',
     long_description_content_type='text/markdown',
     long_description=long_description,
@@ -14,7 +14,7 @@ setuptools.setup(
     author_email='shahilislam@gmail.com',
     license='MIT',
     readme = "README.md",
-    packages=['gapi','gapi.readsheet'],
+    packages=['gapi','gapi.utils','gapi.read_sheet'],
     zip = False,
     install_requires=[
         "importlib-metadata",
